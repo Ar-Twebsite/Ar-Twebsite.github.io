@@ -1,0 +1,21 @@
+:root {
+    --bs-Dark: #0A1128;
+    --bs-Navy: #001F54;
+    --bs-Blue: #034078;
+    --bs-Accent: #1282A2;
+    --bs-White: #FEFCFB;
+}
+
+/* Copy all existing CSS from index.html except page-specific styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--bs-Dark) 0%, var(--bs-Navy) 100%);
+    color: var(--bs-White);
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* ...rest of shared CSS from index.html... */

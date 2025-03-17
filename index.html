@@ -4,8 +4,7 @@
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MN2PF8F8');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
@@ -25,6 +24,8 @@
     <meta name="twitter:description" content="Explore digital art in AR and bring art to life with Ar-T.">
     <meta name="twitter:image" content="https://ar-twebsite.github.io/logo.png">
     <meta name="google-site-verification" content="ZTdFIZROdca3fXPrH0GjnuzzY7bICrEoDVkQCW9kzBM" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -41,7 +42,10 @@
         </script>
         
     <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <style>
+        /* Homepage specific styles only */
         :root {
             --bs-Dark: #0A1128;
             --bs-Navy: #001F54;
@@ -65,10 +69,6 @@
         }
 
         /* Update background colors for various components */
-        .navbar {
-            background: rgba(10, 17, 40, 0.95);
-        }
-
         .problem div {
             background: rgba(254, 252, 251, 0.95);
             border: none;
@@ -118,82 +118,6 @@
 
         .problem h3 {
             color: var(--bs-Navy);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            box-sizing: border-box;
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            height: 40px;
-            margin-right: auto; /* Push logo to the left */
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 30px; /* Increased gap for better spacing */
-            margin: 0;
-            padding: 0;
-            position: absolute; /* Added to center the menu */
-            left: 50%;
-            transform: translateX(-50%); /* Center the menu */
-            opacity: 1; /* Add this */
-            visibility: visible; /* Add this */
-        }
-
-        .navbar ul li {
-            display: inline;
-        }
-
-        .navbar ul li a {
-            color: var(--bs-White);
-            text-decoration: none;
-            font-size: 1rem;
-            position: relative;
-            padding: 5px 0;
-        }
-
-        .navbar ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--bs-Mint);
-            transition: width 0.3s ease;
-        }
-
-        .navbar ul li a:hover::after {
-            width: 100%;
-        }
-
-        .navbar .social-media {
-            display: flex;
-            gap: 15px;
-            margin-left: 20px; /* Add space between menu and social icons */
-        }
-
-        .navbar .social-media img {
-            height: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .navbar .social-media img:hover {
-            transform: scale(1.1); /* Reduced scale effect */
         }
 
         .hero {
@@ -1370,6 +1294,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <meta name="msvalidate.01" content="70699E5436C0CFD9723640C461A9C8E9" />
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1385,23 +1310,23 @@
 
   gtag('config', 'G-W7LJMEDM0V');
 </script>
-    <div class="navbar">
-        <img src="logo.png" alt="Logo" class="logo">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#digital-art-challenges">Problems</a></li>
-            <li><a href="#ar-digital-art-solution">Our Solution</a></li>
-            <li><a href="#try-it">Travel</a></li>
-            <li><a href="#download-ar-t">Download</a></li>
-            <li><a href="#updates">Updates</a></li>
-        </ul>
-        <div class="social-media">
-            <a href="https://www.tiktok.com/@theart.hub" target="_blank" rel="noopener noreferrer"><img src="tiktok-logo.png" alt="TikTok"></a>
-            <a href="https://www.youtube.com/@Startup-developer" target="_blank" rel="noopener noreferrer"><img src="youtube-logo.png" alt="YouTube"></a>
-        </div>
-        <div class="menu-toggle">☰</div>
-        <div class="close-menu">✖</div>
+<div class="navbar">
+    <a href="/">
+        <img src="../logo.png" alt="Logo" class="logo">
+    </a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/faqs">FAQs</a></li>
+    </ul>
+    <div class="social-media">
+        <a href="https://www.tiktok.com/@theart.hub" target="_blank" rel="noopener noreferrer"><img src="tiktok-logo.png" alt="TikTok"></a>
+        <a href="https://www.youtube.com/@Startup-developer" target="_blank" rel="noopener noreferrer"><img src="youtube-logo.png" alt="YouTube"></a>
     </div>
+    <div class="menu-toggle">☰</div>
+    <div class="close-menu">✖</div>
+</div>
     <div id="hero" class="hero">
         <video id="hero-video" autoplay muted playsinline>
             <source src="HEROVIDEO.webm" type="video/webm; codecs=vp9,vorbis">
@@ -1409,8 +1334,8 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Ar-T</h1>
-            <h2>Explore Art Like Never Before with AR</h2>
+            <h1>Experience Art in a Whole New Dimension with AR</h1>
+            <h2>Discover Ar-T—the revolutionary way to explore art instantly and for free through Augmented Reality</h2>
             <a href="https://sidequestvr.com/app/37779/ar-t" class="hero-download-button" target="_blank" rel="noopener noreferrer">
                 Get Started
             </a>
@@ -1560,6 +1485,7 @@
             While Ar-t can be downloaded on Meta Quest devices, we are not related to META Inc.
         </p>
     </footer>
+    <script src="js/navbar.js"></script>
     <script>
         // Intersection Observer for section animations
         const observer = new IntersectionObserver((entries) => {
@@ -1577,223 +1503,47 @@
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close the menu after clicking a link
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Add loading animations to elements
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('img, h3, p').forEach((element, index) => {
-                element.classList.add('fade-in');
-                element.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-
-        // Add hover effect for problem cards
-        document.querySelectorAll('.problem div').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-15px) scale(1.05)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const closeMenu = document.querySelector('.close-menu');
-        const navMenu = document.querySelector('.navbar ul');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.navbar')) {
-                navMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            }
-        });
-
-        // Close menu and remove body class when clicking a link
-        document.querySelectorAll('.navbar ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        });
-
-        // Reveal device cards on scroll
-        const deviceCards = document.querySelectorAll('.device-card');
-        
-        const revealCard = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        };
-
-        const cardObserver = new IntersectionObserver(revealCard, {
-            threshold: 0.3
-        });
-
-        deviceCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            cardObserver.observe(card);
-        });
-
-        // Pause hero video when it ends
-        document.addEventListener('DOMContentLoaded', () => {
-            const heroVideo = document.getElementById('hero-video');
-            heroVideo.addEventListener('ended', () => {
-                // Get the current time (duration) of the video
-                const duration = heroVideo.duration;
-                // Set the current time to slightly before the end
-                // This ensures the last frame is displayed perfectly
-                heroVideo.currentTime = duration - 0.1;
-            });
-
-            const problems = document.querySelector('.problem');
-            const problemObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            problems.classList.add('visible');
-                        }
-                    });
-                },
-                { threshold: 0.1 }
-            );
-            problemObserver.observe(problems);
-        });
-
-        // Enhanced touch feedback for problem cards
-        document.querySelectorAll('.problem div').forEach(card => {
-            card.addEventListener('touchstart', function() {
-                this.style.transform = 'scale(0.98)';
-            }, { passive: true });
-            
-            card.addEventListener('touchend', function() {
-                this.style.transform = '';
-            }, { passive: true });
-        });
-
-        // Replace the existing mobile menu JavaScript with this:
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const closeMenu = document.querySelector('.close-menu');
-            const navMenu = document.querySelector('.navbar ul');
-            const navLinks = document.querySelectorAll('.navbar ul li a');
-            const isMobile = () => window.innerWidth <= 768;
-
-            const toggleMenu = (show) => {
-                if (isMobile()) {
-                    if (show) {
-                        navMenu.classList.add('active');
-                        document.body.classList.add('menu-open');
-                        setTimeout(() => {
-                            navMenu.querySelectorAll('li').forEach(item => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            });
-                        }, 100);
-                    } else {
-                        navMenu.querySelectorAll('li').forEach(item => {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
                         });
-                        setTimeout(() => {
+                        // Close the menu after clicking a link
+                        if (navMenu.classList.contains('active')) {
                             navMenu.classList.remove('active');
                             document.body.classList.remove('menu-open');
-                        }, 300);
+                        }
                     }
-                }
-            };
-
-            // Close menu when clicking a link
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const target = document.querySelector(link.getAttribute('href'));
-                    if (isMobile()) {
-                        toggleMenu(false);
-                        // Wait for menu close animation before scrolling
-                        setTimeout(() => {
-                            target.scrollIntoView({ behavior: 'smooth' });
-                        }, 300);
-                    } else {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-
-            menuToggle.addEventListener('click', () => toggleMenu(true));
-            closeMenu.addEventListener('click', () => toggleMenu(false));
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (isMobile() && 
-                    navMenu.classList.contains('active') &&
-                    !e.target.closest('.navbar ul') &&
-                    !e.target.closest('.menu-toggle')) {
-                    toggleMenu(false);
-                }
-            });
-
-            // Reset menu state on window resize
-            window.addEventListener('resize', () => {
-                if (!isMobile() && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                    navMenu.querySelectorAll('li').forEach(item => {
-                        item.style.opacity = '';
-                        item.style.transform = '';
-                    });
                 }
             });
         });
 
-        // Add the map functionality
-const artworks = {
-    "Mona Lisa": { lat: 48.8606, lon: 2.3376, museum: "Louvre, Paris, France" },
-    "Starry Night": { lat: 40.7614, lon: -73.9776, museum: "MoMA, New York, USA" },
-    "The Birth of Venus": { lat: 43.7687, lon: 11.2560, museum: "Uffizi Gallery, Florence, Italy" },
-    "The Scream": { lat: 59.9139, lon: 10.7522, museum: "National Gallery, Oslo, Norway" },
-    "Girl with a Pearl Earring": { lat: 52.0809, lon: 4.3165, museum: "Mauritshuis, The Hague, Netherlands" },
-    "The Last Supper": { lat: 45.4654, lon: 9.1876, museum: "Santa Maria delle Grazie, Milan, Italy" },
-    "Guernica": { lat: 40.4075, lon: -3.6947, museum: "Museo Reina Sofía, Madrid, Spain" },
-    "The Persistence of Memory": { lat: 40.7614, lon: -73.9776, museum: "MoMA, New York, USA" }
-};
+        // Map functionality
+        const artworks = {
+            "Mona Lisa": { lat: 48.8606, lon: 2.3376, museum: "Louvre, Paris, France" },
+            "Starry Night": { lat: 40.7614, lon: -73.9776, museum: "MoMA, New York, USA" },
+            "The Birth of Venus": { lat: 43.7687, lon: 11.2560, museum: "Uffizi Gallery, Florence, Italy" },
+            "The Scream": { lat: 59.9139, lon: 10.7522, museum: "National Gallery, Oslo, Norway" },
+            "Girl with a Pearl Earring": { lat: 52.0809, lon: 4.3165, museum: "Mauritshuis, The Hague, Netherlands" },
+            "The Last Supper": { lat: 45.4654, lon: 9.1876, museum: "Santa Maria delle Grazie, Milan, Italy" },
+            "Guernica": { lat: 40.4075, lon: -3.6947, museum: "Museo Reina Sofía, Madrid, Spain" },
+            "The Persistence of Memory": { lat: 40.7614, lon: -73.9776, museum: "MoMA, New York, USA" }
+        };
 
-let map, planeMarker, flightPath;
-let markers = [];
-let estimatedTime = 0;
+        let map, planeMarker, flightPath;
+        let markers = [];
+        let estimatedTime = 0;
 
-// ...copy all the functions from Test-map.html (initializeMap, getUserLocation, and addMarker)..
-
-function initializeMap() {
+        function initializeMap() {
             if (!map) {
-            map = L.map('map').setView([20, 0], 2);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(map);
-        }
+                map = L.map('map').setView([20, 0], 2);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+            }
         }
 
         async function getUserLocation() {
@@ -1805,30 +1555,33 @@ function initializeMap() {
                 return;
             }
 
-            // Show and animate containers
             const output = document.getElementById("output");
             const comparison = document.getElementById("comparison");
             
             output.style.display = 'block';
             comparison.style.display = 'block';
             
-            // Trigger reflow
             void output.offsetWidth;
             void comparison.offsetWidth;
             
             output.classList.add('visible');
             comparison.classList.add('visible');
 
-            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${city}`);
-            const data = await response.json();
-            if (data.length === 0) {
-                alert("City not found. Please try again.");
-                return;
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${city}`);
+                const data = await response.json();
+                if (data.length === 0) {
+                    alert("City not found. Please try again.");
+                    return;
+                }
+                
+                const { lat, lon } = data[0];
+                document.getElementById("map").style.opacity = 1;
+                calculateTravelTime(parseFloat(lat), parseFloat(lon), artwork);
+            } catch (error) {
+                console.error("Error fetching location:", error);
+                alert("Error finding location. Please try again.");
             }
-            
-            const { lat, lon } = data[0];
-            document.getElementById("map").style.opacity = 1;  // Fade-in the map
-            calculateTravelTime(parseFloat(lat), parseFloat(lon), artwork);
         }
 
         function calculateTravelTime(userLat, userLon, artwork) {
@@ -1877,7 +1630,7 @@ function initializeMap() {
                 iconSize: [40, 40],
                 iconAnchor: [20, 20]
             });
-            
+
             planeMarker = L.marker([userLat, userLon], { icon: planeIcon }).addTo(map);
             flightPath = L.polyline([[userLat, userLon], [destLat, destLon]], { color: 'blue', dashArray: '5, 10' }).addTo(map);
             
@@ -1889,7 +1642,7 @@ function initializeMap() {
             const steps = 100;
             const latStep = (destLat - userLat) / steps;
             const lonStep = (destLon - userLon) / steps;
-            
+
             function movePlane() {
                 if (i < steps) {
                     const newLat = userLat + latStep * i;
@@ -1905,7 +1658,7 @@ function initializeMap() {
                 }
             }
             setTimeout(() => movePlane(), 2000);
-            
+
             // Create a temporary element to measure text width
             const tempElement = document.createElement('div');
             tempElement.style.cssText = `
@@ -1918,11 +1671,11 @@ function initializeMap() {
             `;
             tempElement.textContent = artwork;
             document.body.appendChild(tempElement);
-            
+
             // Get the actual width of the text
             const textWidth = tempElement.offsetWidth;
             document.body.removeChild(tempElement);
-            
+
             // Add the final artwork label with dynamic width
             const artworkLabel = L.divIcon({
                 className: 'artwork-label',
@@ -1933,18 +1686,18 @@ function initializeMap() {
             L.marker([destLat, destLon], { icon: artworkLabel }).addTo(map);
         }
 
-        function animateTime(start, end, element, duration = 2000) {
+        function animateTime(start, end, element, duration = 2000) {            
             const startTime = performance.now();
             const startMinutes = start * 60;
             const endMinutes = end * 60;
-            
+
             function update(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                
+
                 // Easing function for smoother animation
                 const easeProgress = 1 - Math.pow(1 - progress, 3);
-                
+
                 const currentMinutes = Math.round(startMinutes + (endMinutes - startMinutes) * easeProgress);
                 const hours = Math.floor(currentMinutes / 60);
                 const minutes = currentMinutes % 60;
@@ -1963,7 +1716,6 @@ function initializeMap() {
                     requestAnimationFrame(update);
                 }
             }
-            
             requestAnimationFrame(update);
         }
 
@@ -1985,18 +1737,18 @@ function initializeMap() {
 
         document.addEventListener('DOMContentLoaded', initializeMap);
 
-// Initialize map when the section becomes visible
-const tryItSection = document.querySelector('#try-it');
-const tryItObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !map) {
-            initializeMap();
-            tryItObserver.disconnect();
-        }
-    });
-}, { threshold: 0.1 });
+        // Initialize map when the section becomes visible
+        const tryItSection = document.querySelector('#try-it');
+        const tryItObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !map) {
+                    initializeMap();
+                    tryItObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.1 });
 
-tryItObserver.observe(tryItSection);
+        tryItObserver.observe(tryItSection);
     </script>
 </body>
 </html>

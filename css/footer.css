@@ -1,0 +1,25 @@
+footer {
+    padding: 20px;
+    color: var(--bs-White);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background: var(--bs-Dark);
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: var(--bs-Accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--bs-White);
+}
