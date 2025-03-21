@@ -94,6 +94,10 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
     }
 
     .navbar ul {
@@ -101,9 +105,9 @@
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
         width: 100vw;
         height: 100vh;
-        transform: none;
         background: rgba(0, 7, 45, 0.95);
         flex-direction: column;
         justify-content: center;
@@ -111,10 +115,19 @@
         padding: 20px;
         margin: 0;
         z-index: 999;
+        border-radius: 0;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        transform: none;
     }
 
     .navbar ul.active {
         display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
     }
 
     .navbar ul li {
@@ -135,6 +148,25 @@
     .navbar ul.active li:nth-child(2) { transition-delay: 0.2s; }
     .navbar ul.active li:nth-child(3) { transition-delay: 0.3s; }
     .navbar ul.active li:nth-child(4) { transition-delay: 0.4s; }
+
+    .navbar ul li a {
+        font-size: 1.5rem;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .navbar .logo {
+        height: 35px;
+    }
+
+    .navbar .social-media {
+        margin-right: 40px;
+    }
+
+    .navbar .social-media img {
+        height: 25px;
+    }
 
     .menu-toggle {
         display: block;
