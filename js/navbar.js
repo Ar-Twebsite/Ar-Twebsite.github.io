@@ -18,11 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 setTimeout(() => {
                     navMenu.querySelectorAll('li').forEach((item, index) => {
+                        // Apply initial styles to ensure animation starts correctly
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        
+                        // Force reflow to ensure the browser registers the initial state
+                        item.offsetHeight;
+
+                        // Apply animation styles
                         item.style.opacity = '1';
                         item.style.transform = 'translateY(0)';
                         item.style.transitionDelay = `${index * 0.1}s`;
                     });
-                }, 10);
+                }, 50); // Increased delay to ensure initial state is rendered
             } else {
                 navMenu.querySelectorAll('li').forEach(item => {
                     item.style.opacity = '0';
